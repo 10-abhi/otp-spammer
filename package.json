@@ -5,12 +5,13 @@
   "type": "commonjs",
   "scripts": {
     "dev": "vite",
-    "server": "nodemon ts-node api/index.ts",
+    "server": "tsx watch api/index.ts",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.7.4",
     "express": "^4.19.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -26,8 +27,7 @@
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
-    "nodemon": "^3.1.4",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.17.0",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
