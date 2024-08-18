@@ -1,0 +1,40 @@
+{
+    "0": {
+        "url": "https://2.rome.api.flipkart.com/api/7/user/otp/generate",
+        "method": "POST",
+        "headers": {
+            "X-User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0 FKUA/website/42/website/Desktop"
+        },
+        "data": {
+            "loginId": "+91${target}"
+        }
+    },
+    "1": {
+        "url": "https://www.netmeds.com/mst/rest/v1/id/details/${target}",
+        "method": "GET",
+        "headers": {},
+        "data": {}
+    },
+    "2": {
+        "url": "https://blinkit.com/v2/accounts/",
+        "method": "POST",
+        "headers": {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0",
+            "Accept-Encoding": "gzip, deflate, br, zstd",
+            "auth_key": "c761ec3633c22afad934fb17a66385c1c06c5472b4898b866b7306186d0bb477"
+        },
+        "data": "user_phone=${target}"
+    },
+    "3": {
+        "url": "",
+        "method": "",
+        "headers": {},
+        "data": {}
+    },
+    "4": {
+        "url": "",
+        "method": "",
+        "headers": {},
+        "data": {}
+    }
+}
