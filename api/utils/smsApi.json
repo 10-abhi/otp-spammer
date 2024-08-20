@@ -26,12 +26,39 @@
         "data": "user_phone=${target}"
     },
     "3": {
-        "url": "",
-        "method": "",
-        "headers": {},
-        "data": {}
+        "url": "https://www.myntra.com/gateway/v1/auth/getotp",
+        "method": "POST",
+        "headers": {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0",
+            "Origin": "https://www.myntra.com",
+            "Connection": "keep-alive"
+        },
+        "data": {
+            "phoneNumber": "${target}",
+            "signup": "ONECLICK"
+        }
     },
     "4": {
+        "url": "https://www.meesho.com/api/v1/user/login/request-otp",
+        "method": "POST",
+        "headers": {},
+        "data": {
+            "phone_number": "${target}"
+        }
+    },
+    "5": {
+        "url": "https://api.account.relianceretail.com/service/application/retail-auth/v1.0/send-otp",
+        "method": "POST",
+        "headers": {
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXR1cm5fdWlfdXJsIjoid3d3Lmppb21hcnQuY29tL2N1c3RvbWVyL2FjY291bnQvbG9naW4_bXNpdGU9eWVzIiwiaWF0IjoxNzI0MTMzMDIyLCJleHAiOjE3MjQxMzMzMjIsInNhbHQiOjB9.m3-umON2qXV5lMQ1UZ_Mpq5kAYf3ecO7ZLvJQkA0G_A"
+        },
+        "data": {
+            "client_id": "fdb646ea-e708-4725-a953-228fa1cb8355",
+            "mobile": "${target}",
+            "device_info": "peOM9J9jfrtTqYeq96434OnoQ2iSwpw73MImaBYlT+KbCDCF0tRrhr/Hg+px6EKI1ajE3CMuAvx1iegwkPDNkY/NTqdpqGvuf+PVIxL2/vHO1j8CnO7xIDK9V4LAbAZpIzpSVun8LC4MWUV7pMLauy5RWvTI8AXAel6h6HZu0YYIqy3tcNXqB5SIHTJIJRDDZwVIAe3B/n/P4aOZ4MznE+0Yr9V+pNCtqdvAuSs/Ns6eukzMq8UiDoELcjfYm4x9VlyHHkgMrYcSHfNcvMYnsZfYPcnZrDpCEf9ddf84HBPGkfX8NQoM+BRhF5k4rp4wHn3N4sAHArnbRJRwxddXoQ=="
+        }
+    },
+    "6": {
         "url": "",
         "method": "",
         "headers": {},
