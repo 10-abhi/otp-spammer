@@ -68,6 +68,17 @@
         "data": {}
     },
     "7": {
+        "url": "https://www.swiggy.com/dapi/auth/sms-otp",
+        "method": "POST",
+        "headers": {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0"
+        },
+        "data": {
+            "mobile": "${target}",
+            "_csrf": "Q3XFUWEifNzG-TiLhlyj0KmbvqwOTWGAgPAcG6Rs"
+        }
+    },
+    "8": {
         "url": "",
         "method": "",
         "headers": {},
