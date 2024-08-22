@@ -1,6 +1,6 @@
 import Express from "express";
 import { Request, Response } from "express";
-import { Spammer } from "./utils/otpSpammer";
+import { Spammer } from "./utils/spammer";
 
 const app = Express();
 app.use(Express.json());
