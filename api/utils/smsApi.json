@@ -59,6 +59,15 @@
         }
     },
     "6": {
+        "url": "https://pvt-product.cars24.com/pp/auth/mobile/otp/send/",
+        "method": "POST",
+        "headers": {
+            "x-api-key": "qGuMZcWGxZpgd8uSH4rgkal4v1evAlCd",
+            "phone_number": "${target}"
+        },
+        "data": {}
+    },
+    "7": {
         "url": "",
         "method": "",
         "headers": {},

@@ -30,7 +30,7 @@ export async function Spammer(target : number) {
     await sendRequest(
       apiData.url.replace("${target}" , target),
       apiData.method,
-      apiData.headers,
+      JSON.parse(JSON.stringify(apiData.headers).replace("${target}" , target.toString())),
       JSON.parse(JSON.stringify(apiData.data).replace("${target}" , target.toString()))
     )
   }
