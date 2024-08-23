@@ -1,4 +1,4 @@
-import { workerData } from "worker_threads"
+import { parentPort, workerData } from "worker_threads"
 import { error } from "console"
 
 async function sendRequest(
@@ -22,7 +22,14 @@ async function sendRequest(
   }
 
    async function worker (){
-    await sendRequest( workerData.url , workerData.method , workerData.headers , workerData.data ){
-
-    }
+   try{const response =  await sendRequest( workerData.url ,
+       workerData.method ,
+        workerData.headers ,
+         workerData.data ) ;
+      parentPort?.postMessage(response.data)
+      } catch(error){
+      parentPort?.postMessage(error.message)
+      }
 }
+
+worker();
