@@ -1,5 +1,6 @@
 import { parentPort, workerData } from "worker_threads"
 import { error } from "console"
+import axios from "axios"
 
 async function sendRequest(
     url : string,

