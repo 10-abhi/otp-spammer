@@ -189,5 +189,18 @@
             "send_otp": true,
             "is_un_teach_user": false
         }
+    },
+    "16": {
+        "url": "https://www.jio.com/api/jio-login-service/login/sendOtp",
+        "method": "POST",
+        "headers": {
+            "Accept": "*/*",
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0"
+        },
+        "data": {
+            "loginFlowType": "Mobile",
+            "mobileNumber": "${target}"
+        }
     }
+
 }
