@@ -5,7 +5,7 @@ export const Footer = () => {
 
   return (
     <AnimatePresence>
-      <div className="h-20 w-full items-center flex gap-2 justify-center bg-transparent text-slate-300 text-xl font-mono font-bold ">
+      <div className="h-20 w-full items-center flex flex-row gap-2 justify-center bg-transparent text-slate-300 xsm:text-xl font-mono font-bold ">
          <div>Contributed By </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
