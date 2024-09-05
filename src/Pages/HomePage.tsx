@@ -3,6 +3,8 @@ import { Footer } from "../components/footer"
 import { Navbar } from "../components/NavBar"
 import { Number } from "../components/Number"
 import { InputBox } from "../components/InputBox"
+import axios from "axios"
+
 
    
 export const HomePage = ()=>{
@@ -13,7 +15,9 @@ export const HomePage = ()=>{
         <Number></Number>
         <InputBox></InputBox>
         <div className="flex justify-center">
-            <Button></Button>
+            <Button onClick={async()=>{
+                axios.get("http://localhost:3000/sms?target="+target)
+            }} ></Button>
         </div>
         
     </div>
