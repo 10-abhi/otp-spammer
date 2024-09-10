@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "concurrently \"npm run server:dev\" \"npm run dev\"",
     "server:dev": "tsx watch api/index.ts",
-    "build:api": "tsc -b api",
+    "build:api": "tsc -b",
     "build:react": "vite build",
     "build": "npm run build:api && npm run build:react",
     "lint": "eslint .",

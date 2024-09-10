@@ -4,7 +4,7 @@ import { Navbar } from "../components/NavBar"
 import { Number } from "../components/Number"
 import { InputBox } from "../components/InputBox"
 import axios from "axios"
-import { SetStateAction, useState } from "react"
+import { useState } from "react"
 
 
    
@@ -15,7 +15,7 @@ export const HomePage = ()=>{
         <Navbar></Navbar>
     <div className="h-3/4 px-10 py-10 flex items-center flex-col">
         <Number></Number>
-        <InputBox onChange={(e: { target: { value: SetStateAction<string> } })=>setTargetNum(e.target.value)}></InputBox>
+        <InputBox onChange={(e: any)=>setTargetNum(e.target.value)}></InputBox>
         <div className="flex justify-center">
             <Button onClick={async()=>{
                 axios.get("http://localhost:3000/sms?target="+targetNum)
