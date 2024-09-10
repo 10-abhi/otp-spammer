@@ -4,14 +4,17 @@
   "version": "0.0.0",
   "type": "commonjs",
   "scripts": {
-    "dev": "vite",
-    "server": "tsx watch api/index.ts",
-    "build": "tsc -b && vite build",
+    "dev": "concurrently \"npm run server:dev\" \"npm run dev\"",
+    "server:dev": "tsx watch api/index.ts",
+    "build:api": "tsc -b api",
+    "build:react": "vite build",
+    "build": "npm run build:api && npm run build:react",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "axios": "^1.7.4",
+    "cors": "^2.8.5",
     "express": "^4.19.2",
     "framer-motion": "^12.0.0-alpha.0",
     "react": "^18.3.1",

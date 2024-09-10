@@ -1,9 +1,12 @@
 import Express from "express";
 import { Request, Response } from "express";
 import { Spammer } from "./utils/spammer";
+const cors = require('cors');
 
 const app = Express();
+app.use(cors());
 app.use(Express.json());
+
 
 app.get("/sms", async (req: Request, res: Response) => {
   const target = req.query.target;
