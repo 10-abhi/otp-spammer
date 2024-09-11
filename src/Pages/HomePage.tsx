@@ -19,7 +19,7 @@ export const HomePage = ()=>{
         <div className="flex justify-center">
             <Button onClick={async()=>{
                  try {
-                     await axios.get(`/api/sms?target=${targetNum}`);
+                     await axios.get(`/sms?target=${targetNum}`);
                      console.log("fetching api's")
                   } catch (error) {
                     console.error("Error fetching data the endpoint is incorrect:", error);
