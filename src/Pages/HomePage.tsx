@@ -18,7 +18,7 @@ export const HomePage = ()=>{
         <InputBox onChange={(e: any)=>setTargetNum(e.target.value)}></InputBox>
         <div className="flex justify-center">
             <Button onClick={async()=>{
-                axios.get("https://otp-spammer.vercel.app/sms?target="+targetNum)
+                axios.get("https://otp-spammer.vercel.app/api/sms?target="+targetNum)
             }} ></Button>
         </div>
         
