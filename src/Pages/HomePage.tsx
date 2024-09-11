@@ -18,8 +18,13 @@ export const HomePage = ()=>{
         <InputBox onChange={(e: any)=>setTargetNum(e.target.value)}></InputBox>
         <div className="flex justify-center">
             <Button onClick={async()=>{
-                axios.get(`/api/sms?target=${targetNum}`)
-            }} ></Button>
+                 try {
+                     await axios.get(`/api/sms?target=${targetNum}`);
+                     console.log("fetching api's")
+                  } catch (error) {
+                    console.error("Error fetching data the endpoint is incorrect:", error);
+                    
+            }}}></Button>
         </div>
         
     </div>
