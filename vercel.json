@@ -1,13 +1,9 @@
 {
-    "routes": [
-      {
-        "src": "/api/index.ts",
-        "dest": "api/dist/index.js"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "src/index.html"
-      }
-    ]
-  }
-  
+    "rewrites": [
+        {
+            "source": "/api/(.*)",
+            "destination": "/api"
+        }
+    ],
+    "regions": ["bom1"]
+}
