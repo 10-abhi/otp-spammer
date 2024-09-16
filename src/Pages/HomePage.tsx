@@ -18,7 +18,7 @@ export const HomePage = ()=>{
         <InputBox onChange={(e: { target: { value: SetStateAction<string> } })=>setTargetNum(e.target.value)}></InputBox>
         <div className="flex justify-center">
             <Button onClick={async()=>{
-                axios.get("http://localhost:3000/sms?target="+targetNum)
+                axios.get("sms?target="+targetNum)
             }} ></Button>
         </div>
         

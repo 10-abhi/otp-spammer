@@ -1,4 +1,4 @@
-export const InputBox = ({onChange})=>{
+export const InputBox = ({onChange}:any)=>{
        return  <div className="pt-0 pb-6" >
               <input type="text" placeholder="8829201764" className="border-2
        
