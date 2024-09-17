@@ -4,11 +4,16 @@
     {
       "src": "package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "build" }
+      "config": {
+        "distDir": "dist"
+      }
     },
     {
       "src": "api/**/*.ts",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "tsconfig": "tsconfig.server.json"
+      }
     }
   ],
   "routes": [
@@ -17,20 +22,7 @@
       "dest": "/api/$1"
     },
     {
-      "src": "^/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "^/favicon.ico",
-      "dest": "/favicon.ico"
-    },
-    {
-      "src": "^/manifest.json",
-      "dest": "/manifest.json"
-    },
-    {
-      "src": "^/(.*).(js|json|css|map)",
-      "dest": "/$1.$2"
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
