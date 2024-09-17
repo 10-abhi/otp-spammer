@@ -1,13 +1,18 @@
 {
-
   "compilerOptions": {
-    // ... other compiler options
+    "target": "es2017",
+    "module": "commonjs",
+    "outDir": "dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true
   },
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
+  "include": [
+    "api/**/*"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
-

@@ -1,14 +1,33 @@
 {
-  "build": {
-  },
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "api/**/*.ts",
+      "use": "@vercel/node",
+      "config": {
+        "tsconfig": "tsconfig.server.json"
+      }
+    }
+  ],
   "routes": [
     {
-      "src": "/api",
-      "dest": "api/dist/index.js"
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
-      "dest": "src/index.html"
+      "dest": "/index.html"
     }
-  ]
+  ],
+  "regions": ["bom1"]
 }
