@@ -8,9 +8,9 @@ export async function Spammer(target: number) {
 
     if (key === "default") continue
 
-    const apiData = smsApiData[key];
+    const apiData = smsApiData[key as keyof typeof smsApiData];
 
-    const url = apiData.url.replace("${target}", target);
+    const url = apiData.url.replace("${target}", JSON.stringify(target));
     const method = apiData.method;
     const headers = JSON.parse(JSON.stringify(apiData.headers).replace("${target}", target.toString()));
     const data = JSON.parse(JSON.stringify(apiData.data).replace("${target}", target.toString()));
