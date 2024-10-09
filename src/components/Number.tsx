@@ -1,3 +1,4 @@
+import React from "react"
 
 export const Number = ()=>{
     return <div className="text-lg text-white font-medium p-6">

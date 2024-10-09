@@ -5,9 +5,9 @@
   "type": "commonjs",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "build:api": "tsc -p tsconfig.server.json",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "server": "tsx watch api/index.ts",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -16,7 +16,10 @@
     "express": "^4.19.2",
     "framer-motion": "^12.0.0-alpha.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "threads": "^1.7.0",
+    "worker": "^0.4.0",
+    "worker-thread": "^1.1.0"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",

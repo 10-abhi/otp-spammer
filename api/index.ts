@@ -1,4 +1,4 @@
-import Express from "express";
+const Express = require("express");
 import { Request, Response } from "express";
 import { Spammer } from "./utils/spammer";
 const cors = require('cors');

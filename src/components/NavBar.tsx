@@ -1,3 +1,4 @@
+import React from "react"
 
  export const Navbar = ()=>{
       return <div className=" bg-slate-900 h-20 w-full  flex justify-around  font-bold text-2xl items-center px-2 py-2">

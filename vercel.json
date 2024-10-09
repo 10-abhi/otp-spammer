@@ -26,7 +26,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "dist/$1"
     }
   ],
   "regions": ["bom1"]

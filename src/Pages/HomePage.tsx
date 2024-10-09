@@ -5,6 +5,7 @@ import { Number } from "../components/Number"
 import { InputBox } from "../components/InputBox"
 import axios from "axios"
 import { SetStateAction, useState } from "react"
+import React from "react"
 
 
    

@@ -11,7 +11,7 @@
   },
   "include": [
     "api/**/*"
-  ],
+, "dist/utils/worker.js"  ],
   "exclude": [
     "node_modules"
   ]

